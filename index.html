@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Moto Lube | Salinas MG</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <div class="brand-group">
+                <img src="img/icon.jpg" alt="Logo" class="main-logo">
+                <div class="logo-text">
+                    <h1>MOTO LUBE</h1>
+                    <span class="tagline">Sua segurança, nossa missão.</span>
+                </div>
+            </div>
+            <div class="status-group">
+                <div class="clock-badge">
+                    <i class="far fa-clock"></i> 08:00 - 18:00
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero-v5">
+            <div class="overlay"></div>
+            <div class="hero-inner">
+                <span class="label">PREMIUM MOTORCYCLE CARE</span>
+                <h2>A melhor oficina de Salinas.</h2>
+            </div>
+        </section>
+
+        <div class="emergency-call">
+            <a href="https://wa.me/553838411170?text=ESTOU+COM+PROBLEMA+NA+MOTO+AGORA" class="sos-btn">
+                <i class="fas fa-exclamation-triangle"></i> SOCORRO MECÂNICO RÁPIDO
+            </a>
+        </div>
+
+        <section class="container">
+            <div class="services-grid-v5">
+                <div class="svc-item"><i class="fas fa-oil-can"></i><span>Óleo</span></div>
+                <div class="svc-item"><i class="fas fa-microchip"></i><span>Injeção</span></div>
+                <div class="svc-item"><i class="fas fa-wrench"></i><span>Revisão</span></div>
+                <div class="svc-item"><i class="fas fa-bolt"></i><span>Bateria</span></div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="booking-master">
+                <div class="booking-top">
+                    <h3>Agendamento Digital</h3>
+                    <p>Preencha os detalhes e receba a confirmação</p>
+                </div>
+
+                <div class="form-body">
+                    <div class="input-row">
+                        <div class="input-wrap">
+                            <label>PILOTO</label>
+                            <input type="text" id="nome" placeholder="Seu nome">
+                        </div>
+                        <div class="input-wrap">
+                            <label>MÁQUINA</label>
+                            <input type="text" id="moto" placeholder="Modelo">
+                        </div>
+                    </div>
+
+                    <div class="input-wrap">
+                        <label>O QUE VAMOS FAZER NA MOTO?</label>
+                        <select id="servico" class="select-lux">
+                            <option value="" disabled selected>Escolha o serviço...</option>
+                            <option value="Troca de Óleo Completa">Troca de Óleo Completa</option>
+                            <option value="Revisão Geral (Check-up)">Revisão Geral (Check-up)</option>
+                            <option value="Limpeza de Injeção Eletrônica">Limpeza de Injeção Eletrônica</option>
+                            <option value="Substituição de Bateria">Substituição de Bateria</option>
+                            <option value="Kit Transmissão">Kit Transmissão</option>
+                            <option value="Pastilhas e Discos de Freio">Pastilhas e Discos de Freio</option>
+                            <option value="Suspensão Dianteira/Traseira">Suspensão Dianteira/Traseira</option>
+                            <option value="Diagnóstico de Falhas (Scanner)">Diagnóstico de Falhas (Scanner)</option>
+                            <option value="Outros Serviços / Orçamentos">Outros Serviços / Orçamentos</option>
+                        </select>
+                    </div>
+
+                    <div class="input-wrap">
+                        <label>PREFERÊNCIA DE HORÁRIO</label>
+                        <input type="text" id="horario" placeholder="Ex: Segunda-feira às 14h">
+                    </div>
+
+                    <button onclick="enviarZap()" class="btn-confirm">
+                        ENVIAR PARA A OFICINA <i class="fab fa-whatsapp"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="container section">
+            <h2 class="section-title">Nossa Oficina</h2>
+            <div class="map-box-v5">
+                <div class="map-header">
+                    <i class="fas fa-map-pin"></i> Rua Mendo Correa, 333, Salinas-MG
+                </div>
+                <div class="iframe-wrap">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3788.1362758113735!2d-42.29656102390141!3d-16.16616428452441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xab3f6be721846b6b%3A0x8e3ea932fe1e9b22!2sMotolube%20Pe%C3%A7as%20e%20Lubrificantes%20LTDA!5e0!3m2!1spt-BR!2sbr!4v1700000000000" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+                <a href="https://maps.app.goo.gl/ChIJa9uEKevrTQcRInse_jKvPu0" target="_blank" class="map-link">
+                    VER NO GOOGLE MAPS <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-lux">
+        <p>© 2026 MOTO LUBE | Desenvolvido com Excelência</p>
+    </footer>
+
+    <script>
+        function enviarZap() {
+            const nome = document.getElementById('nome').value;
+            const moto = document.getElementById('moto').value;
+            const servico = document.getElementById('servico').value;
+            const horario = document.getElementById('horario').value;
+
+            if(!nome || !moto || !servico) {
+                alert('Preencha os dados para o agendamento.');
+                return;
+            }
+
+            const msg = `*MOTO LUBE SALINAS*%0A` +
+                        `*Solicitação de Agendamento:*%0A%0A` +
+                        `👤 *Cliente:* ${nome}%0A` +
+                        `🏍️ *Moto:* ${moto}%0A` +
+                        `🔧 *Serviço:* ${servico}%0A` +
+                        `⏰ *Horário:* ${horario}`;
+            
+            window.open(`https://wa.me/553838411170?text=${msg}`, '_blank');
+        }
+    </script>
+</body>
+</html>
